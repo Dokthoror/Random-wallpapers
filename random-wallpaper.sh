@@ -30,7 +30,8 @@ image_dir=${1:?'You must add a directory in first argument'}
 delay=${2:-60}
 
 
-# Create custom directory for picture in the given directory
+# Delete and create custom directory for picture in the given directory for updating images
+[[ -d $image_dir/$RANDOM_DIR ]] && rm -r $image_dir/$RANDOM_DIR
 mkdir $image_dir/$RANDOM_DIR > /dev/null 2>&1
 [[ $? != 0 && $? != 1 ]] && echo "Unable to create $image_dir/$RANDOM_DIR" && exit 2
 
