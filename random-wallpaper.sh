@@ -1,6 +1,6 @@
 #!/bin/bash
 #Author: Dokthoror
-#Version: 1.0
+#Version: 1.1
 #Required: gnome environment
 #Use: ./random-wallpaper.sh <pictures directory: required> <delay in seconds: optional>
 #Repo: https://github.com/Dokthoror/Random-wallpapers
