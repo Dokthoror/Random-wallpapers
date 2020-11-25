@@ -1,6 +1,6 @@
 #!/bin/bash
 #Author: Dokthoror
-#Version: 1.0
+#Version: 1.1
 #Required: gnome environment
 #Use: ./random-wallpaper.sh <pictures directory: required> <delay in seconds: optional>
 #Repo: https://github.com/Dokthoror/Random-wallpapers
@@ -43,7 +43,7 @@ do                                                                              
     if [[ $extension == 'jpg' || $extension == 'jpeg' || $extension == 'png' ]] # tests if the extension of a file is an image or not
     then                                                                        #
         ((count++))                                                             # if it's a picture, add 1 to the count variable
-	    cp "$image_dir/$file" "$image_dir/$RANDOM_DIR/$count.$extension"        # and copy the picture with the name '1.jpg' is the concerned picture is a jpg and the number one
+	    ln -s "$image_dir/$file" "$image_dir/$RANDOM_DIR/$count.$extension"     # and link the picture with the name '1.jpg' is the concerned picture is a jpg and the number one
     fi
 done
 
