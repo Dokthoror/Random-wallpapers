@@ -53,7 +53,7 @@ done
 
 while [[ true ]]
 do
-    image_number=$(($RANDOM % $count))
+    image_number=$(($RANDOM % $count + 1))
     [[ -f "$image_dir/$RANDOM_DIR/$image_number.jpg" ]] && image_background="$image_dir/$RANDOM_DIR/$image_number.jpg"      # Add jpg extension if the picture is a jpg
     [[ -f "$image_dir/$RANDOM_DIR/$image_number.jpeg" ]] && image_background="$image_dir/$RANDOM_DIR/$image_number.jpeg"    # Add jepg extension if the picture is a jpeg
     [[ -f "$image_dir/$RANDOM_DIR/$image_number.png" ]] && image_background="$image_dir/$RANDOM_DIR/$image_number.png"      # Add png extension if the picture is a png
